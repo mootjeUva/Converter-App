@@ -1,1 +1,2 @@
 # Converter-App
+This application will convert all your problems! Do you have a .txt file, but do you need a .pdf format? CONVERT! Do you have centimetres, but do you need inches? CONVERT! Next to that, it has a versatile Math-Solver. Where you can integrate and differentiate any math equation.
