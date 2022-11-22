@@ -20,10 +20,16 @@
                     <a href="{% url 'index' %}">Home</a>
                 </div>
                 <div>
-                    <a href="{% url 'unit' %}" > Unit  </a>
+                    <a href="{% url 'page' slug='unit' %}" > Unit  </a>
                 </div>
                 <div>
-                    <a href="{% url 'file_converter' %}" > File Converter  </a>
+                    <a href="{% url 'page' slug='files' %}" > File Converter  </a>
+                </div>
+                <div>
+                    <a href="{% url 'page' slug='math' %}" > Math-Solver  </a>
+                </div>
+                <div>
+                    <a href="{% url 'page' slug='valuta' %}" > Valuta  </a>
                 </div>
                 {% block nav %}
                 {% endblock %}

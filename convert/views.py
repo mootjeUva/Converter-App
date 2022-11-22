@@ -7,8 +7,7 @@ from django.http import HttpResponse
 def index(request):
     return render(request, "convert/index.html")
 
-def unit(request):
-    return render(request, "convert/unit.html")
-
-def file_converter(request):
-    return render(request, "convert/files.html")
+def page(request, slug):
+    return render(request, "convert/{}.html".format(slug) , {
+        "slug": slug
+        })
