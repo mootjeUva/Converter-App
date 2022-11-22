@@ -5,11 +5,46 @@
 {% endblock %}
 
 {% block body %}
-    <h1>Choose Unit</h1>
+
+
+
+cm = <input id="first" onchange="convert_units()">
+inch = <input type="text" id="answer" value="">
+
+
+<br><br><br>
+<select id="b" onchange="ts2()" >
+    <option name="mm" value="mm"> Milimeter (mm) </option>
+    <option name="cm" value="cm"> Centimeter (cm) </option>
+    <option name="meter" value="meter"> Meter (m) </option>
+    <option name="km" value="km"> Kilometer (km) </option>
+    <option name="inch" value="inch"> Inch (in) </option>
+    <option name="feet" value="feet"> Foot (ft) </option>
+    <option name="yard" value="yard"> Yard (yd) </option>
+    <option name="mile" value="mile"> Mile (mi) </option>
+    <input id="first2" onblur="ts2()">
+</select>
+
+<select id="b2" onchange="ts2()" >
+    <option name="mm" value="mm"> Milimeter (mm) </option>
+    <option name="cm" value="cm"> Centimeter (cm) </option>
+    <option name="meter" value="meter"> Meter (m) </option>
+    <option name="km" value="km"> Kilometer (km) </option>
+    <option name="inch" value="inch"> Inch (in) </option>
+    <option name="feet" value="feet"> Foot (ft) </option>
+    <option name="yard" value="yard"> Yard (yd) </option>
+    <option name="mile" value="mile"> Mile (mi) </option>
+    <input type="text" id="answer2" value="">
+</select>
+<br><br><br>
+
+    
+    <br><br><br><br><br>
+
     <input type="text" class="input value1">
     <input type="text" class="input value2">
     <input type="text" disabled="disabled" id="result">
-    <select name="unit1">
+    <select name="unit1" >
         <option value="mm"> Milimeter (mm) </option>
         <option value="cm"> Centimeter (cm) </option>
         <option value="meter"> Meter (m) </option>
