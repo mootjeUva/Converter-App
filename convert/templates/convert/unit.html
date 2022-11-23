@@ -45,7 +45,28 @@
     <option name="R" value="R"> Rankine (°R) </option>
     <input type="text" id="temp_answer" value="" disabled="disabled">
 </select>
+<br><br><br><br>
 
-
+<h1>Mass</h1>
+<select id="mass_from" onchange="mass_converter()" >
+    <option name="mg" value="mg"> Milligram (mg) </option>
+    <option name="g" value="g"> Gram (g) </option>
+    <option name="kg" value="kg"> Kilogram (kg) </option>
+    <option name="oz" value="oz"> Ounce (oz) </option>
+    <option name="lb" value="lb"> Pound (lb) </option>
+    <option name="st" value="st"> Stone (st) </option>
+    <option name="t" value="t"> Tonne (t) </option>
+    <input id="mass1" onblur="mass_converter()">
+</select>
+<select id="mass_to" onchange="mass_converter()" >
+    <option name="mg" value="mg"> Milligram (mg) </option>
+    <option name="g" value="g"> Gram (g) </option>
+    <option name="kg" value="kg"> Kilogram (kg) </option>
+    <option name="oz" value="oz"> Ounce (oz) </option>
+    <option name="lb" value="lb"> Pound (lb) </option>
+    <option name="st" value="st"> Stone (st) </option>
+    <option name="t" value="t"> Tonne (t) </option>
+    <input type="text" id="mass_answer" value="" disabled="disabled">
+</select>
 
 {% endblock %}

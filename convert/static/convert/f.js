@@ -80,3 +80,49 @@ function temp_converter()
     document.getElementById("temp_answer").value = result;
   }
 }
+
+function mass_converter()
+{
+  var mass1, base, result, mass_from, mass_to;
+  mass1 = parseFloat(document.getElementById("mass1").value);
+  mass_from = String(document.getElementById("mass_from").value);
+  mass_to = String(document.getElementById("mass_to").value);
+  if (mass_from == "mg") {
+    base = mass1;
+  } else if (mass_from == "g") {
+    base = mass1*1000;
+  } else if (mass_from == "kg") {
+    base = mass1*1000**2;
+  } else if (mass_from == "oz") {
+    base = mass1*28349.523125;
+  } else if (mass_from == "lb") {
+    base = mass1*453592.37;
+  } else if (mass_from == "st") {
+    base = mass1*6350293.18 ;
+  } else if (mass_from == "t") {
+    base = mass1*10**9 ;
+  }
+
+  if (mass_to == "mg") {
+    result = base;
+  } else if (mass_to == "g") {
+    result = base/1000;
+  } else if (mass_to == "kg") {
+    result = base/1000**2;
+  } else if (mass_to == "oz") {
+    result = base/28349.523125;
+  } else if (mass_to == "lb") {
+    result = base/453592.37;
+  } else if (mass_to == "st") {
+    result = base/6350293.18;
+  } else if (mass_to == "t") {
+    result = base/10**9;
+  }
+  result = Number((result).toFixed(10));
+  if (isNaN(mass1)) {
+    document.getElementById("mass_answer").value = "" ;
+  }
+  else {
+    document.getElementById("mass_answer").value = result;
+  }
+}
