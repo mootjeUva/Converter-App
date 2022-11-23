@@ -5,15 +5,8 @@
 {% endblock %}
 
 {% block body %}
-
-
-
-cm = <input id="first" onchange="convert_units()">
-inch = <input type="text" id="answer" value="">
-
-
-<br><br><br>
-<select id="b" onchange="ts2()" >
+<h1>Distance</h1>
+<select id="unit_from" onchange="unit_converter()" >
     <option name="mm" value="mm"> Milimeter (mm) </option>
     <option name="cm" value="cm"> Centimeter (cm) </option>
     <option name="meter" value="meter"> Meter (m) </option>
@@ -22,10 +15,9 @@ inch = <input type="text" id="answer" value="">
     <option name="feet" value="feet"> Foot (ft) </option>
     <option name="yard" value="yard"> Yard (yd) </option>
     <option name="mile" value="mile"> Mile (mi) </option>
-    <input id="first2" onblur="ts2()">
+    <input id="num1" onblur="unit_converter()">
 </select>
-
-<select id="b2" onchange="ts2()" >
+<select id="unit_to" onchange="unit_converter()" >
     <option name="mm" value="mm"> Milimeter (mm) </option>
     <option name="cm" value="cm"> Centimeter (cm) </option>
     <option name="meter" value="meter"> Meter (m) </option>
@@ -34,37 +26,26 @@ inch = <input type="text" id="answer" value="">
     <option name="feet" value="feet"> Foot (ft) </option>
     <option name="yard" value="yard"> Yard (yd) </option>
     <option name="mile" value="mile"> Mile (mi) </option>
-    <input type="text" id="answer2" value="">
+    <input type="text" id="answer" value="" disabled="disabled">
 </select>
-<br><br><br>
 
-    
-    <br><br><br><br><br>
+<br><br><br><br>
+<h1>Temperature</h1>
+<select id="temp_from" onchange="temp_converter()" >
+    <option name="C" value="C"> Celsius (°C) </option>
+    <option name="F" value="F"> Fahrenheit (°F) </option>
+    <option name="K" value="K"> Kelvin (K) </option>
+    <option name="R" value="R"> Rankine (°R) </option>
+    <input id="temp1" onblur="temp_converter()">
+</select>
+<select id="temp_to" onchange="temp_converter()" >
+    <option name="C" value="C"> Celsius (°C) </option>
+    <option name="F" value="F"> Fahrenheit (°F) </option>
+    <option name="K" value="K"> Kelvin (K) </option>
+    <option name="R" value="R"> Rankine (°R) </option>
+    <input type="text" id="temp_answer" value="" disabled="disabled">
+</select>
 
-    <input type="text" class="input value1">
-    <input type="text" class="input value2">
-    <input type="text" disabled="disabled" id="result">
-    <select name="unit1" >
-        <option value="mm"> Milimeter (mm) </option>
-        <option value="cm"> Centimeter (cm) </option>
-        <option value="meter"> Meter (m) </option>
-        <option value="km"> Kilometer (km) </option>
-        <option value="inch"> Inch (in) </option>
-        <option value="feet"> Foot (ft) </option>
-        <option value="yard"> Yard (yd) </option>
-        <option value="mile"> Mile (mi) </option>
-    </select>
 
-    <select name="unit2">
-        <option value="mm"> Milimeter (mm) </option>
-        <option value="cm"> Centimeter (cm) </option>
-        <option value="meter"> Meter (m) </option>
-        <option value="km"> Kilometer (km) </option>
-        <option value="inch"> Inch (in) </option>
-        <option value="feet"> Foot (ft) </option>
-        <option value="yard"> Yard (yd) </option>
-        <option value="mile"> Mile (mi) </option>
-    </select>
 
-    <button>Convert</button>
 {% endblock %}
